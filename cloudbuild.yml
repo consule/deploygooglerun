@@ -1,5 +1,58 @@
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/vanessa-psicologia-308312/vanessa-psicologia:$SHORT_SHA', '.']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/vanessa-psicologia-308312/vanessa-psicologia:$SHORT_SHA', '.']
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: psicologiaservice
+  namespace: '71575957875'
+  selfLink: >-
+    /apis/serving.knative.dev/v1/namespaces/71575957875/services/psicologiaservice
+  uid: a589057c-bc56-4c3a-ae3f-5441cb59a1c7
+  resourceVersion: AAW+DNU3Yb4
+  generation: 3
+  creationTimestamp: '2021-03-21T13:55:17.283574Z'
+  labels:
+    managed-by: gcp-cloud-build-deploy-cloud-run
+    gcb-trigger-id: 689c6454-cf03-4248-8a44-ac7a5df4618e
+    commit-sha: c6f4d46fa10c604500696804129ce22b22df1511
+    gcb-build-id: 0627871e-393d-4321-a785-4a6ce6013f10
+    cloud.googleapis.com/location: southamerica-east1
+  annotations:
+    run.googleapis.com/client-name: gcloud
+    serving.knative.dev/creator: cristianoconsule@gmail.com
+    serving.knative.dev/lastModifier: 71575957875@cloudbuild.gserviceaccount.com
+    client.knative.dev/user-image: >-
+      us.gcr.io/vanessa-psicologia-308312/deploygooglerun/psicologiaservice:c6f4d46fa10c604500696804129ce22b22df1511
+    run.googleapis.com/client-version: 332.0.0
+    run.googleapis.com/launch-stage: BETA
+    run.googleapis.com/ingress: all
+    run.googleapis.com/ingress-status: all
+spec:
+  template:
+    metadata:
+      name: psicologiaservice-00003-xah
+      labels:
+        managed-by: gcp-cloud-build-deploy-cloud-run
+        gcb-trigger-id: 689c6454-cf03-4248-8a44-ac7a5df4618e
+        commit-sha: c6f4d46fa10c604500696804129ce22b22df1511
+        gcb-build-id: 0627871e-393d-4321-a785-4a6ce6013f10
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        client.knative.dev/user-image: >-
+          us.gcr.io/vanessa-psicologia-308312/deploygooglerun/psicologiaservice:c6f4d46fa10c604500696804129ce22b22df1511
+        run.googleapis.com/client-version: 332.0.0
+        autoscaling.knative.dev/maxScale: '100'
+        run.googleapis.com/sandbox: gvisor
+    spec:
+      containerConcurrency: 80
+      timeoutSeconds: 300
+      containers:
+      - image: >-
+          us.gcr.io/vanessa-psicologia-308312/deploygooglerun/psicologiaservice:c6f4d46fa10c604500696804129ce22b22df1511
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 256Mi
+  traffic:
+  - percent: 100
+    latestRevision: true
