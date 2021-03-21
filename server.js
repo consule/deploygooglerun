@@ -1,6 +1,6 @@
 const http = require("http")
 const server = http.createServer((req, res) => {
-    console.log("New Conneciont");
+    console.log("Pelo VSCode");
     res.end("Aqui não pode ter acento")
 })
 
