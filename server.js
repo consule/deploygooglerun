@@ -1,6 +1,6 @@
 const http = require("http")
 const server = http.createServer((req, res) => {
-    console.log("Pelo VSCode agora foi");
+    console.log("Pelo VSCode agora foi  com o yaml do google");
     res.end("Este é um teste enviado pelo vscode")
 })
 
