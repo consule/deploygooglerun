@@ -1,7 +1,7 @@
 const http = require("http")
 const server = http.createServer((req, res) => {
     console.log("Pelo VSCode agora foi");
-    res.end("Aqui nao pode ter acento")
+    res.end("Este é um teste enviado pelo vscode")
 })
 
 const PORT = process.env.PORT || 8080
