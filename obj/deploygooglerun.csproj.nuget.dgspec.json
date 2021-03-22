@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Cc\\deploygooglerun\\deploygooglerun.csproj": {}
+    "C:\\Users\\001.cconsule\\Desktop\\deploygooglerun\\deploygooglerun.csproj": {}
   },
   "projects": {
-    "C:\\Cc\\deploygooglerun\\deploygooglerun.csproj": {
+    "C:\\Users\\001.cconsule\\Desktop\\deploygooglerun\\deploygooglerun.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Cc\\deploygooglerun\\deploygooglerun.csproj",
+        "projectUniqueName": "C:\\Users\\001.cconsule\\Desktop\\deploygooglerun\\deploygooglerun.csproj",
         "projectName": "deploygooglerun",
-        "projectPath": "C:\\Cc\\deploygooglerun\\deploygooglerun.csproj",
+        "projectPath": "C:\\Users\\001.cconsule\\Desktop\\deploygooglerun\\deploygooglerun.csproj",
         "packagesPath": "C:\\Users\\001.cconsule\\.nuget\\packages\\",
-        "outputPath": "C:\\Cc\\deploygooglerun\\obj\\",
+        "outputPath": "C:\\Users\\001.cconsule\\Desktop\\deploygooglerun\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,12 +42,12 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Swashbuckle.AspNetCore": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[1.10.9, )"
             }
           },
           "imports": [

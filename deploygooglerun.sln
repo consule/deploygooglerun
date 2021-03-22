@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "deploygooglerun", "deploygooglerun.csproj", "{FC6DF2DF-C464-4E43-91FD-0814A2E56FD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC6DF2DF-C464-4E43-91FD-0814A2E56FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6DF2DF-C464-4E43-91FD-0814A2E56FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6DF2DF-C464-4E43-91FD-0814A2E56FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6DF2DF-C464-4E43-91FD-0814A2E56FD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62427D25-4633-4149-B55E-DFE81B0616B9}
+	EndGlobalSection
+EndGlobal
