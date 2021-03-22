@@ -1,17 +1,20 @@
-FROM mrc.microsoft.com/dotnet/core/sdk:3.1 AS build-dev
-
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
+EXPOSE 80
+EXPOSE 443
 
-COPY . ./
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+WORKDIR /src
+COPY ["deploygooglerun.csproj", "./"]
+RUN dotnet restore "deploygooglerun.csproj"
+COPY . .
+WORKDIR "/src/."
+RUN dotnet build "deploygooglerun.csproj" -c Release -o /app/build
 
-RUN dotnet publish -c Release -o out 
+FROM build AS publish
+RUN dotnet publish "deploygooglerun.csproj" -c Release -o /app/publish
 
-FROM mrc.microsoft.com/dotnet/core/aspnet:3.1
-
+FROM base AS final
 WORKDIR /app
-
-COPY --from=build-dev /app/out . 
-
-ENV ASPNETCORE_ENVIRONMENT Production
-
-ENTRYPOINT ["dotnet", "XXXXXX.Ui.api.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "deploygooglerun.dll"]
